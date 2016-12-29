@@ -1,0 +1,237 @@
+{
+	"box_office": [
+		{
+			"tickets": [
+				{
+					"name": "GA 1",
+					"price": 20,
+					"capacity": 100,
+					"projected": 75
+				},
+				{
+					"name": "GA 2",
+					"price": 25,
+					"capacity": 100,
+					"projected": 75
+				},
+				{
+					"name": "GA 3",
+					"price": 30,
+					"capacity": 50,
+					"projected": 25
+				}
+			]
+		},
+		{
+			"tickets_2": [
+				{
+					"name": "GA 1",
+					"price": 20,
+					"capacity": 100,
+					"projected": 75
+				},
+				{
+					"name": "GA 2",
+					"price": 25,
+					"capacity": 100,
+					"projected": 75
+				},
+				{
+					"name": "GA 3",
+					"price": 30,
+					"capacity": 50,
+					"projected": 25
+				}
+			]
+		}
+	],
+	"expenses": [
+		{
+			"name": "Advertising/Marketing",
+			"cost": 300,
+			"cost_internal": 300
+		},
+		{
+			"name": "Catering/Hospitality",
+			"cost": 100,
+			"cost_internal": 100
+		},
+		{
+			"name": "Rent",
+			"cost": 500,
+			"cost_internal": 0
+		},
+		{
+			"name": "Sound",
+			"cost": 100,
+			"cost_internal": 100
+		},
+		{
+			"name": "Lights",
+			"cost": 100,
+			"cost_internal": 100
+		},
+		{
+			"name": "Box Office",
+			"cost": 100,
+			"cost_internal": 100
+		},
+		{
+			"name": "Backline",
+			"cost": 0,
+			"cost_internal": 0
+		},
+		{
+			"name": "Stagehands",
+			"cost": 100,
+			"cost_internal": 100
+		},
+		{
+			"name": "Insurance",
+			"cost": 50,
+			"cost_internal": 50
+		},
+		{
+			"name": "Transportation",
+			"cost": 0,
+			"cost_internal": 0
+		},
+		{
+			"name": "ASCAP / BMI / SESAC",
+			"cost": 50,
+			"cost_internal": 50
+		},
+		{
+			"name": "Miscellaneous",
+			"cost": 0,
+			"cost_internal": 0
+		}
+	],
+	"artists": [
+		{
+			"name": "Headliner",
+			"guarantee": 1000,
+			"percentage": "70",
+			"payments": []
+		},
+		{
+			"name": "Support",
+			"guarantee": 100,
+			"percentage": 0,
+			"payments": []
+		},
+		{
+			"name": "Support",
+			"guarantee": 100,
+			"percentage": 0,
+			"payments": []
+		}
+	],
+	"location": {},
+	"venue": {},
+	"facility_fee": 1.25,
+	"ticketing_rebate": 3,
+	"food_beverage_rebate": 6,
+	"promoter_percentage": 15,
+	"facility_fee_total": 0,
+	"deal": {},
+	"agent": {},
+	"offer_date": "",
+	"dates": [],
+	"ages": "21+",
+	"door_time": "20:00:00",
+	"set_time": "21:00:00",
+	"curfew": "02:00:00",
+	"custom_venue": false,
+	"deal_language": "+ 85% backend.",
+	"notes": "<h4>ALL INCLUSIVE</h4><p>offer is all inclusive of support, backline, artist transportation, lodging and artist supplied production.</p><h4>SEND CONTRACT AND TICKET COUNTS TO</h4><p><a href=\"mailto:nmuller@aeglive.com\">nmuller@aeglive.com</a></p><h4>SEND ADMAT TO</h4><p><a href=\"mailto:gaston@larimerlounge.com\">gaston@larimerlounge.com</a> and <a href=\"mailto:ashlyn@larimerlounge.com\">ashlyn@larimerlounge.com</a></p><h4>ADVANCE CONTACT</h4><p><a href=\"bruno@larimerlounge.com\">bruno@larimerlounge.com</a></p><h4>SEND LARIMER POSTERS TO</h4><p>Larimer Lounge<br>Attn: Gaston<br>2721 Larimer Street<br>Denver CO 80205<br>(please do not send posters to AEG Live)</p><h4>EXCLUSIVITY</h4><p>This is an exclusive market offer. No other shows within 50 miles for 3 months before or 2 months after. NOTE: $2 Fee per ticket added on all underage tickets sold.</p><h4>DEPOSITS</h4><p>deposits over $300 will be settled 2 weeks prior to show via company check. Deposits under $300 will be settled 100% in full night of show.</p><h4>MERCH</h4><p>100% to artist. Artist sells.</p>",
+	"event_name": "",
+	"event_artist": "",
+	"event_date": "",
+	"event_guarantee": "",
+	"event_venue": "",
+	"event_billing": "",
+	"event_ticket_prices": "",
+	"event_offer_expiration": "",
+	"event_description": "",
+	"past_artists": "2 CHAINZ\nA PLACE TO BURY STRANGERS\nBATTLES\nBLACK ANGELS\nBUILT TO SPILL\nBLACK JOE LEWIS\nDADA LIFE\nDIPLO\nDIRTY PROJECTORS\nDINOSAUR JR\nDEL THA FUNKY HOMOSAPIEN\nGHOSTLAND OBSERVATORY\nGIRL TALK\nGUIDED BY VOICES\nCHROMEO\nFLUME\nKING KAHN\nLUCERO\nMAN MAN\nMISTERWIVES\nMOWGLIS\nNICK WATERHOUYSE\nNEON INDIAN\nROBERT DELONG\nSUPERCHUNK\nTRAMPLED BY TURTLES\nWAVERACER\nand more!",
+	"event_exclusivity": "",
+	"status": {
+		"approved": false,
+		"offer_sent": false,
+		"confirmed": false
+	},
+	"send_offer_to": "",
+	"send_offer_cc": "",
+	"send_offer_bcc": "",
+	"send_offer_subject": "",
+	"send_offer_message": "",
+	"capacity": "",
+	"capacity_secondary": "",
+	"end_of_night": {
+		"square_expected": 0,
+		"square_actual": 0,
+		"underage_fee_quantity": 0,
+		"underage_fee_gross": 0,
+		"food_buyout": 0,
+		"food_buyout_wnr": 0,
+		"food_buyout_aloha": 0,
+		"net": 0,
+		"drop": 0,
+		"black_bag": {
+			"use": 0,
+			"total": 0,
+			"remainder": 0
+		},
+		"cash_drawer_payout": 0,
+		"id_scanner_issues": "",
+		"id_checker_notes": "",
+		"bmi_ascap": 50,
+		"marketing": 200,
+		"insurance": 50,
+		"bar": {
+			"cash": 0,
+			"cash_tax": 0,
+			"cash_liquor": 0,
+			"cash_net": 0,
+			"cc": 0,
+			"cc_tax": 0,
+			"cc_liquor": 0,
+			"cc_processing": 0,
+			"cc_net": 0,
+			"total_gross": 0,
+			"total_net": 0
+		},
+		"artist_fb": {
+			"beverage": 0,
+			"beverage_liquor": 0,
+			"bar_comp": 0,
+			"bar_comp_liquor": 0,
+			"groceries": 0,
+			"total_fb": 0
+		},
+		"payroll": {
+			"sound": 0,
+			"sound_payroll": 0,
+			"door": 0,
+			"door_payroll": 0,
+			"bartender_1": 0,
+			"bartender_1_tax": 0,
+			"bartender_2": 0,
+			"bartender_2_tax": 0,
+			"bartender_3": 0,
+			"bartender_3_tax": 0,
+			"total": 0
+		},
+		"tickets_total": 0,
+		"total_show_gross": 0,
+		"total_talent": 0,
+		"total_misc": 0,
+		"flash": 0,
+		"net_per_head_bar": 0,
+		"net_per_head_total": 0,
+		"notes_short": "",
+		"notes_long": ""
+	},
+	"walkout_hidden": true
+}
