@@ -13,11 +13,6 @@ var fs = require("fs"),
 	babelify = require('babelify'),
 	vueify = require('vueify'),
 
-// SCSS
-	sass = require('gulp-sass'),
-	autoprefixer = require('gulp-autoprefixer'),
-	sourcemaps = require('gulp-sourcemaps'),
-
 // ImageMin
 	imagemin = require('gulp-imagemin'),
 
@@ -36,14 +31,12 @@ gulp.task('watch', function () {
 		'basePath': './'
 	});
 
-	// minify and move JavaScript
-	gulp.watch(sourceDir + 'js/**/*', ['js']);
+	// javascript and scss
+	gulp.watch(sourceDir + ['scss/**/*', 'js/**/*'], ['js']);
 
 	// move fonts
 	gulp.watch(sourceDir + 'fonts/**/*', ['fonts']);
 
-	// compile and move SCSS
-	gulp.watch(sourceDir + 'scss/**/*', ['js']);
 
 	// optimize and move images
 	gulp.watch(sourceDir + 'images/**/*', ['img']);
