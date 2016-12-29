@@ -8,3 +8,4 @@ npm-debug.log
 !public/
 public/*
 !public/invoice
+yarn.lock
