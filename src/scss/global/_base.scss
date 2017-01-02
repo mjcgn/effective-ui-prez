@@ -4,7 +4,7 @@
 	box-sizing: border-box;
 }
 
-html, body, wrapper {
+html, body, wrapper, main {
 	height: 100%;
 	min-height: 100%;
 }
@@ -34,11 +34,12 @@ body {
 	*/
 }
 
-wrapper {
+wrapper, main {
 	display: block;
+	mix-blend-mode: multiply;
 	position: relative;
+	z-index: 1;
 }
-
 
 
 /*=====     Block Elements     =====*/

@@ -1,47 +1,37 @@
 module.exports = function(server){
-	var io = require('socket.io')(server),
-		coords = {},
-		clients = [];
-		
-	io.on('connection', function(conn) {
-		// add client to clients array
-		clients.push(conn);
-		
-		// set initial coordinates for client
-		coords[conn.id] = { x : 0, y : 0, t : Date.now() };
+	var io = require('socket.io')(server);
+
+	io.on('connection', function(socket) {
+
+		var clients = [];
+
+		for (var i in io.sockets.sockets) {
+			clients.push({
+				id: io.sockets.sockets[i].id,
+				isController: (typeof io.sockets.sockets[i].isController !== 'undefined') ? io.sockets.sockets[i].isController : false
+			});
+		}
+
+		console.log(clients)
+
+		io.emit('clients', clients);
 
 		// receive information
-		conn.on('coords', function(n) {
-			// remove old coordinates
-			for (var c in coords) {
-				if ( coords[c].t + 5000 < Date.now() ) {
-					delete coords[c];
-				}
-			}
-			
-			// set new coordinates for client
-			coords[conn.id] = n;
-
-			// loop through connected clients
-			for (var c in clients) {
-				if (clients[c] !== undefined) {
-					// broadcast to client
-					clients[c].emit('coords', coords);
-				} else {
-					// garbage collection
-					delete clients[c];
-				}
-			}
+		socket.on('up', function(n) {
+			io.sockets.sockets[n].emit('up');
 		});
-	});
-	
-	// disconnect
-	io.on('disconnect', function(conn) {
-		// delete client coordinates
-		delete coords[conn.id];
-		
-		// delete client from array
-		delete clients[conn];
+		socket.on('down', function(n) {
+			io.sockets.sockets[n].emit('down');
+		});
+		socket.on('left', function(n) {
+			io.sockets.sockets[n].emit('left');
+		});
+		socket.on('right', function(n) {
+			io.sockets.sockets[n].emit('right');
+		});
+		socket.on('controllerStatus', function(n) {
+			socket.isController = n;
+		});
 	});
 
 	io.on('error', function(err){

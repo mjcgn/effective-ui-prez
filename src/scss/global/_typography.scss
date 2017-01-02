@@ -8,29 +8,33 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
+	font-family: $font__secondary;
+	letter-spacing: 0.125;
 }
 
 // headings
 h1 {
 	@include font-size(3, 2, 2);
-	font-family: $font__secondary;
+
+	border: {
+		top: solid 0.0625 * $base__line_height $color__black;
+		bottom: solid 0.0625 * $base__line_height $color__black;
+	}
+
+	font-family: $font__primary;
 	text-transform: uppercase;
 }
 
 h2 {
-	@include font-size(2, 1, 1);
-	font-family: $font__secondary;
-	text-transform: uppercase;
+	@include font-size(2, 2, 1);
 }
 
 h3 {
 	@include font-size(1.5, 1, 1);
-	font-family: $font__secondary;
 }
 
 h4 {
 	@include font-size(1, 1, 1);
-	font-family: $font__secondary;
 }
 
 // paragraph

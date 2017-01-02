@@ -2,7 +2,7 @@
 
 // base measurements
 $base__ratio: 1.5;
-$base__font-size: 1rem;
+$base__font-size: 1.125rem;
 $base__line-height: $base__font-size * $base__ratio;
 
 // column measurements
@@ -23,8 +23,8 @@ $grid__breakpoints: (
 // colors
 $color__white: #FFFFFF;
 $color__green: #38b449;
-$color__black: #000000;
+$color__black: #222222;
 
 // fonts
-$font__primary: 'DIN', sans-serif;
-$font__secondary: 'DIN', sans-serif;
+$font__secondary: 'Quincy CF', serif;
+$font__primary: 'F37 Jan', sans-serif;

@@ -21,7 +21,7 @@ var fs = require("fs"),
 	buildDir = 'public/';
 
 // Single-use Gulp build task
-gulp.task('build', ['fonts', 'js', 'img', 'svg']);
+gulp.task('build', ['fonts', 'js', 'img', 'svg', 'markdown']);
 
 // Watch build task
 gulp.task('watch', function () {
@@ -31,12 +31,17 @@ gulp.task('watch', function () {
 		'basePath': './'
 	});
 
-	// javascript and scss
-	gulp.watch(sourceDir + ['scss/**/*', 'js/**/*'], ['js']);
+	// compile SCSS and Vue Components
+	gulp.watch(sourceDir + 'scss/**/*', ['js']);
+
+	// compile vue components
+	gulp.watch(sourceDir + 'js/**/*', ['js']);
+
+	// move markdown
+	gulp.watch(sourceDir + 'md/**/*', ['markdown']);
 
 	// move fonts
 	gulp.watch(sourceDir + 'fonts/**/*', ['fonts']);
-
 
 	// optimize and move images
 	gulp.watch(sourceDir + 'images/**/*', ['img']);
@@ -45,26 +50,18 @@ gulp.task('watch', function () {
 	gulp.watch(sourceDir + 'svg/**/*', ['svg']);
 });
 
-gulp.task('scss', function () {
-	return gulp.src(sourceDir + 'scss/**/*.scss')
-		.pipe(sourcemaps.init())
-		.pipe(sass({
-			outputStyle: 'compressed'
-		}).on('error', sass.logError))
-		.pipe(autoprefixer({
-			browsers: ['last 2 versions', 'Explorer >= 9'],
-			cascade: false
-		}))
-		.pipe(sourcemaps.write())
-
-		.pipe(gulp.dest(buildDir + 'css'))
+gulp.task('fonts', function () {
+	return gulp.src(sourceDir + 'fonts/**/*')
+		.pipe(gulp.dest(buildDir + 'fonts/'))
 		.pipe(livereload());
 });
 
-gulp.task('fonts', function () {
-	return gulp.src(sourceDir + 'fonts/**/*')
-		.pipe(gulp.dest(buildDir + 'fonts/'));
+gulp.task('markdown', function () {
+	return gulp.src(sourceDir + 'md/**/*')
+		.pipe(gulp.dest(buildDir + 'md/'))
+		.pipe(livereload());
 });
+
 gulp.task('vueify', function () {
 	var b = browserify({
 		entries: [sourceDir + 'js/main.js'],
@@ -104,7 +101,8 @@ gulp.task('svg', function () {
 	"use strict";
 
 	return gulp.src(sourceDir + 'svg/**/*')
-		.pipe(gulp.dest(buildDir + 'svg'));
+		.pipe(gulp.dest(buildDir + 'svg'))
+		.pipe(livereload());
 });
 
 gulp.task('img', function () {
@@ -112,5 +110,6 @@ gulp.task('img', function () {
 
 	return gulp.src(sourceDir + 'img/**/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest(buildDir + 'img'));
+		.pipe(gulp.dest(buildDir + 'img'))
+		.pipe(livereload());
 });
