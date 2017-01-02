@@ -7,5 +7,5 @@ npm-debug.log
 .idea
 !public/
 public/*
-!public/invoice
+!public/favicon.ico
 yarn.lock
