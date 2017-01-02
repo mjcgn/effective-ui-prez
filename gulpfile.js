@@ -21,7 +21,7 @@ var fs = require("fs"),
 	buildDir = 'public/';
 
 // Single-use Gulp build task
-gulp.task('build', ['fonts', 'js', 'img', 'svg', 'markdown']);
+gulp.task('build', ['fonts', 'js', 'svg', 'markdown']);
 
 // Watch build task
 gulp.task('watch', function () {
@@ -109,7 +109,6 @@ gulp.task('img', function () {
 	"use strict";
 
 	return gulp.src(sourceDir + 'img/**/*')
-		.pipe(imagemin())
 		.pipe(gulp.dest(buildDir + 'img'))
 		.pipe(livereload());
 });
