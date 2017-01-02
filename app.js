@@ -13,7 +13,7 @@ app.use(compression({
 }));
 
 // static (public) directory
-app.use(express.static('./public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // set all routes to hit static template. We'll handle routing on the front-end
 app.get('*', function(req, res){
