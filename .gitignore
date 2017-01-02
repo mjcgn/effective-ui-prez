@@ -5,4 +5,7 @@ data/
 log/
 npm-debug.log
 .idea
+!public/
+public/*
+!public/favicon.ico
 yarn.lock
