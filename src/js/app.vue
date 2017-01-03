@@ -42,11 +42,11 @@
 		<header v-show="isController == false" role="banner" class="global-header">
 			<nav class="global-header__nav">
 				<router-link to="/slides/0" active-class="active" exact>Introduction</router-link>
-				<router-link to="/slides/1" active-class="active" exact>Origins</router-link>
-				<router-link to="/slides/2" active-class="active" exact>Initiatives</router-link>
-				<router-link to="/slides/3" active-class="active" exact>Responsibilities</router-link>
+				<router-link to="/slides/1" active-class="active" exact>Antecedents</router-link>
+				<router-link to="/slides/2" active-class="active" exact>Goals &amp; Initiatives</router-link>
+				<router-link to="/slides/3" active-class="active" exact>Roles &amp; Responsibilities</router-link>
 				<router-link to="/slides/4" active-class="active" exact>Challenges</router-link>
-				<router-link to="/slides/5" active-class="active" exact>Learning&nbsp;Experiences</router-link>
+				<router-link to="/slides/5" active-class="active" exact>Learning Experiences</router-link>
 			</nav>
 		</header>
 
