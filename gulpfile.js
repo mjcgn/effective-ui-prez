@@ -12,6 +12,7 @@ var fs = require("fs"),
 	uglify = require('gulp-uglify'),
 	babelify = require('babelify'),
 	vueify = require('vueify'),
+	autoprefixer = require('autoprefixer'),
 
 // ImageMin
 	imagemin = require('gulp-imagemin'),
@@ -76,6 +77,7 @@ gulp.task('vueify', function () {
 					includePaths: [sourceDir + 'scss/'],
 					outputStyle: 'compressed'
 				},
+				postcss: [autoprefixer]
 			})
 			.bundle()
 			.pipe(source('main.js'))

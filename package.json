@@ -7,7 +7,7 @@
   "author": "Killian Louis Grant",
   "license": "MIT",
   "dependencies": {
-    "autoprefixer": "^6.6.0",
+    "autoprefixer": "^6.6.1",
     "babel-plugin-transform-runtime": "^6.15.0",
     "babel-preset-es2015": "^6.18.0",
     "babelify": "^7.3.0",
