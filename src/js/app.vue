@@ -24,9 +24,11 @@
 		color: $color__white;
 		display: block;
 		flex: auto;
+		font-size: 0.75 * $base__font-size;
 		font-weight: 700;
 		line-height: 2 * $base__line-height;
 		text-align: center;
+		text-transform: uppercase;
 
 		&.active, &:hover {
 			background-color: $color__white;
@@ -47,6 +49,7 @@
 				<router-link to="/slides/3" active-class="active" exact>Roles &amp; Responsibilities</router-link>
 				<router-link to="/slides/4" active-class="active" exact>Challenges</router-link>
 				<router-link to="/slides/5" active-class="active" exact>Learning Experiences</router-link>
+				<router-link to="/slides/6" active-class="active" exact>Results</router-link>
 			</nav>
 		</header>
 

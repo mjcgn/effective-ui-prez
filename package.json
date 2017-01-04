@@ -36,7 +36,7 @@
     "webpack": "^1.14.0"
   },
   "engines": {
-    "node" : "latest"
+    "node": "latest"
   },
   "scripts": {
     "nodemon": "sudo node ./node_modules/nodemon/bin/nodemon.js ./bin/www --ignore ./public --ignore ./src"

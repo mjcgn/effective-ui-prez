@@ -3,7 +3,7 @@
 	@import 'includes';
 
 	#bg {
-		filter: blur($base__line-height * .125);
+		// filter: blur($base__line-height * .125);
 		bottom: 0;
 		display: block;
 		height: 100%;
@@ -16,7 +16,7 @@
 		z-index: 1;
 
 		path {
-			fill: rgb(128,128,128);
+			fill: rgb(92,92,92);
 		}
 	}
 
@@ -116,7 +116,7 @@
 		methods: {
 			bg () {
 				let svg = window.D3.select('#bg'),
-					t_h = window.base__lineHeight * 4,
+					t_h = window.base__lineHeight * 2,
 					t_w = Math.round(t_h * 1.155),
 					w_w = window.innerWidth,
 					w_h = window.innerHeight,
