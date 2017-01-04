@@ -34,15 +34,15 @@ window.store = new Vuex.Store({
 		isController: false,
 		clients: [],
 		socketId: '',
-		numSlides: 6,
+		numSlides: 7,
 		currentSlide: 0
 	}
 });
 
 // components
-const App = require('./app.vue');
-const Slide = require('./slide.vue');
-const Controller = require('./controller.vue');
+const App = require('./components/app.vue');
+const Slide = require('./components/slide.vue');
+const Controller = require('./components/controller.vue');
 
 // router
 const routes = [
