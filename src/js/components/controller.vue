@@ -4,6 +4,8 @@
 
 	.controller {
 		padding: $base__line-height 0;
+		position: relative;
+		z-index: 1;
 	}
 
 	.keyboard {
