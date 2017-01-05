@@ -34,6 +34,15 @@
 			@include pre(0.5);
 			@include post(0.5);
 		}
+
+		ul {
+			margin: $base__line-height 0;
+			padding: 0 0 0 $base__line-height;
+
+			li {
+				line-height: $base__line-height;
+			}
+		}
 	}
 </style>
 

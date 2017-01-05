@@ -13,7 +13,7 @@ Vue.use(VueRouter);
 Vue.use(Vuex);
 
 // global variables
-window.base__lineHeight = ((1.25 * 16) * 1.5);
+window.base__lineHeight = (60.75 / 2);
 window.socket = io();
 window.D3 = D3;
 window.marked = Marked;

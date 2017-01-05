@@ -16,93 +16,51 @@
 		z-index: 1;
 
 		path {
-			fill: rgb(92,92,92);
+			fill: rgb(255,255,255);
 		}
 	}
 
-	@keyframes tr1 {
-		0% {
-			opacity: 0;
+	@keyframes tr {
+		from {
+			fill: rgb(255,255,255);
 		}
 
-		33% {
-			opacity: 0.033;
-		}
-
-		66% {
-			opacity: 0.066;
-		}
-
-		100% {
-			opacity: 0.1;
-		}
-	}
-
-	@keyframes tr2 {
-		0% {
-			opacity: 0.1;
-		}
-
-		33% {
-			opacity: 0;
-		}
-
-		66% {
-			opacity: 0.033;
-		}
-
-		100% {
-			opacity: 0.066;
-		}
-	}
-
-	@keyframes tr3 {
-		0% {
-			opacity: 0.066;
-		}
-
-		33% {
-			opacity: 0.1;
-		}
-
-		66% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 0.033;
-		}
-	}
-
-	@keyframes tr4 {
-		0% {
-			opacity: 0.033;
-		}
-
-		33% {
-			opacity: 0.066;
-		}
-
-		66% {
-			opacity: 0.1;
-		}
-
-		100% {
-			opacity: 0;
+		to {
+			fill: rgb(240,240,240);
 		}
 	}
 
 	.tr_1 {
-		animation: tr1 30s infinite alternate;
+		animation-name: tr;
+		animation-delay: 0s;
+		animation-direction: alternate;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 	}
 	.tr_2 {
-		animation: tr2 30s infinite alternate;
+		animation-name: tr;
+		animation-delay: 0s;
+		animation-direction: alternate-reverse;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 	}
 	.tr_3 {
-		animation: tr3 30s infinite alternate;
+		animation-name: tr;
+		animation-delay: 5s;
+		animation-direction: alternate;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 	}
 	.tr_4 {
-		animation: tr4 30s infinite alternate;
+		animation-name: tr;
+		animation-delay: 5s;
+		animation-direction: alternate-reverse;
+		animation-duration: 10s;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
 	}
 </style>
 
