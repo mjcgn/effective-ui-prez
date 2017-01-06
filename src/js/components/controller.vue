@@ -11,7 +11,7 @@
 	.keyboard {
 		@include container;
 		display: flex;
-		margin: $base__line-height auto;
+		margin: $base__line-height * 6 auto 0 auto;
 		width: 11 * $base__line-height;
 	}
 
@@ -26,20 +26,6 @@
 
 		&:nth-of-type(1) {
 			margin: 0 4 * $base__line-height $base__line-height 4 * $base__line-height;
-		}
-	}
-
-	.scroll {
-		border-radius: 0.125 * $base__line-height;
-		border: solid 0.0625 * $base__line_height $color__black;
-		margin: auto;
-		padding: $base__line-height;
-		width: 11 * $base__line-height;
-
-		h3 {
-			pointer-events: none;
-			text-align: center;
-			text-transform: uppercase;
 		}
 	}
 
@@ -70,7 +56,7 @@
 		<div class="clientSelect">
 			<label for="clients">Select a Client</label>
 			<select id="clients" v-model="currentClient">
-				<option v-for="client in clients" v-if="client.isController == false">{{ client.id }}</option>
+				<option v-for="client in clients" v-if="client.isController == false && client.id !== socketId">{{ client.id }}</option>
 			</select>
 		</div>
 
@@ -101,14 +87,23 @@
 				currentClient: ''
 			};
 		},
+		computed: {
+			socketId: function() {
+				console.log(this.$store.state.socketId)
+				return this.$store.state.socketId;
+			}
+		},
 		created () {
 			var _this = this;
 			this.$store.state.isController = true;
+			window.socket.emit('controllerStatus', true);
+			console.log('sent')
+
 			// socket listeners
 			window.socket.on('clients', function(e) {
+				console.log(e);
 				_this.clients = e;
 			});
-			window.socket.emit('controllerStatus', true);
 		},
 		methods: {
 			onUpClick (e) {

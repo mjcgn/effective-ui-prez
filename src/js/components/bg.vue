@@ -14,53 +14,21 @@
 		top: 0;
 		width: 100%;
 		z-index: 1;
-
-		path {
-			fill: rgb(255,255,255);
-		}
-	}
-
-	@keyframes tr {
-		from {
-			fill: rgb(255,255,255);
-		}
-
-		to {
-			fill: rgb(240,240,240);
-		}
 	}
 
 	.tr_1 {
-		animation-name: tr;
-		animation-delay: 0s;
-		animation-direction: alternate;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
+		fill: rgba(192,192,192, .25);
 	}
 	.tr_2 {
-		animation-name: tr;
-		animation-delay: 0s;
-		animation-direction: alternate-reverse;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
+		fill: rgba(192,192,192, .125);
+
 	}
 	.tr_3 {
-		animation-name: tr;
-		animation-delay: 5s;
-		animation-direction: alternate;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
+		fill: rgba(192,192,192, .0625);
+
 	}
 	.tr_4 {
-		animation-name: tr;
-		animation-delay: 5s;
-		animation-direction: alternate-reverse;
-		animation-duration: 10s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
+		fill: rgba(192,192,192, 0);
 	}
 </style>
 
@@ -74,7 +42,7 @@
 		methods: {
 			bg () {
 				let svg = window.D3.select('#bg'),
-					t_h = window.base__lineHeight * 2,
+					t_h = window.base__lineHeight * .5,
 					t_w = Math.round(t_h * 1.155),
 					w_w = window.innerWidth,
 					w_h = window.innerHeight,

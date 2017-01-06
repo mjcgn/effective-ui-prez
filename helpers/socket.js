@@ -3,18 +3,20 @@ module.exports = function(server){
 
 	io.on('connection', function(socket) {
 
-		var clients = [];
+		function getClients() {
+			var clients = [];
+			for (var i in io.sockets.sockets) {
+				clients.push({
+					id: io.sockets.sockets[i].id,
+					isController: (typeof io.sockets.sockets[i].isController !== 'undefined') ? io.sockets.sockets[i].isController : false
+				});
+			}
 
-		for (var i in io.sockets.sockets) {
-			clients.push({
-				id: io.sockets.sockets[i].id,
-				isController: (typeof io.sockets.sockets[i].isController !== 'undefined') ? io.sockets.sockets[i].isController : false
-			});
+			return clients;
 		}
+		
 
-		console.log(clients)
-
-		io.emit('clients', clients);
+		io.emit('clients', getClients());
 
 		// receive information
 		socket.on('up', function(n) {
@@ -31,7 +33,13 @@ module.exports = function(server){
 		});
 		socket.on('controllerStatus', function(n) {
 			socket.isController = n;
+
+			io.emit('clients', getClients());
 		});
+
+		socket.on('disconnect', function () {
+			io.emit('clients', getClients());
+		})
 	});
 
 	io.on('error', function(err){
